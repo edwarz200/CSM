@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="Assets/CMS.png" type="image/x-icon">
+    <title>Concejo Municipal De San Gil Live</title>
+</head>
+
+<body>
+    <video autoplay controls></video>
+    <script>
+        window.URL = window.URL || window.webkitURL;
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+        navigator.getUserMedia({
+                audio: true,
+                video: true
+            },
+            function(localMediaStream) {
+                var video = document.querySelector('video');
+                video.src = window.URL.createObjectURL(localMediaStream);
+                video.onloadedmetadata = function(e) {
+                    // Haz algo con el video aquí.
+                };
+            },
+
+            // errorCallback *Opcional
+            function(err) {
+                console.log("Ocurrió el siguiente error: " + err);
+            });
+    </script>
+</body>
+
+</html>
