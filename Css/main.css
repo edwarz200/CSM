@@ -1,0 +1,45 @@
+li {
+    list-style: none;
+}
+
+.oculto {
+    display: none;
+}
+
+.minh-100 {
+    height: 100vh;
+}
+
+.logoload {
+    animation: logoload 2.5s linear infinite;
+}
+
+.linea {
+    width: 150px;
+    height: 20px;
+    filter: blur(.5px);
+    animation: linea 2.5s linear infinite;
+}
+
+@keyframes linea {
+    0% {
+        width: 150px;
+    }
+    50% {
+        width: .5%;
+    }
+}
+
+@keyframes logoload {
+    0% {
+        filter: grayscale(0);
+    }
+    50% {
+        filter: grayscale(200%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
+}
+
+;

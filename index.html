@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="Assets/CMS.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/main.css">
     <title>Concejo Municipal De San Gil Live</title>
 </head>
 
 <body>
+    <div id="load" class="text-center fixed-top">
+        <section id="loading" class="row justify-content-center align-items-center minh-100">
+            <ul>
+                <li>
+                    <img class="logoload" src="Assets/logo2.png">
+                </li>
+                <li>
+                    <img class="linea" src="Assets/linea.png" alt="">
+                </li>
+                <li>
+                    <h6>Cargando Hardware...</h6>
+                </li>
+            </ul>
+        </section>
+    </div>
 
-    <h1>Accediendo al hardware</h1>
 
-    <video src="" id="video" autoplay controls></video>
+    <video id="video" class="oculto" src="" controls autoplay></video>
+    <audio id="player" class="oculto" controls autoplay></audio>
+
 
     <script src="Js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
